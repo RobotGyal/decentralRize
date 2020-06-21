@@ -20,7 +20,7 @@
     <br> 
 </p>
 
-## 📝 Table of Contents
+## 📝 Table of the Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
