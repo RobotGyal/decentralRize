@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'activism.apps.ActivismConfig',
+    'business.apps.BusinessConfig',
+    'knowledge.apps.KnowledgeConfig',
+    'wellness.apps.WellnessConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
