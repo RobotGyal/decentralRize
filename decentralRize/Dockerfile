@@ -5,7 +5,7 @@ FROM python:3
 WORKDIR /code
 
 # Move requirements file into working directory in conatiner
-COPY ./decentralRize/ /code
+COPY decentralRize/ /code
 
 # Install requirements in the working directory
 RUN pip3 install -r requirements.txt
