@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404, HttpResponse
+from django.shortcuts import render, HttpResponse
 
 
 
 def index(request):
-    return HttpResponse("Hello World!")
+    return render(request, 'index.html')
