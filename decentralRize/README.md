@@ -16,7 +16,7 @@
 
 ---
 
-<p align="center"> Invest in Black Owned Businesses. 
+<p align="center"> Invest in Black Owned Businesses Today!!!
     <br> 
 </p>
 
