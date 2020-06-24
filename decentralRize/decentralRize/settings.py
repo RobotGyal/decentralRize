@@ -25,7 +25,7 @@ SECRET_KEY = 'rz^p$dfu%30^l59i7^8f&ax@_mhvn91medvp3n9_=v$dzll$gu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-  ALLOWED_HOSTS = ['localhost', 'decentralrize.herokuapp.com']
+  ALLOWED_HOSTS = ['localhost',  '127.0.0.1', 'decentralrize.herokuapp.com']
 
 
 # Application definition
@@ -123,8 +123,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_DIRS= [
-    os.path.join(BASE_DIR, 'static')
-]
+# STATICFILES_DIRS= [
+#     os.path.join(BASE_DIR, 'static')
+# ]
+
+# Required for Heroku
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
