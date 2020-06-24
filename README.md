@@ -47,13 +47,13 @@ This will help consumers move away from traditional economic constructs and towa
 ### Prerequisites
 
 - Download Django and Python3  
-- Have a basic understnading of command line scripting
+- Have a basic understanding of command line scripting
 
 
 ### Installing
 
 1. Download via the green 'clone or download' button in the upper right of the repo. 
-2. Once downloaded, go to the terminal and navigate insode the _'decentralize'_ folder.
+2. Once downloaded, go to the terminal and navigate inside the _'decentralize'_ folder.
 3. Run the server `python3 manage.py runserver`  
 
 ***Live version will be available soon!***
