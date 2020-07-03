@@ -143,8 +143,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # ie if Heroku server
-# if 'DATABASE_URL' in os.environ:
-#     import dj_database_url
-#     DATABASES = {'default': dj_database_url.config()}
+if 'DATABASE_URL' in os.environ:
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config()}
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
