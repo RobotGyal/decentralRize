@@ -31,16 +31,16 @@ ALLOWED_HOSTS = ['localhost',  '127.0.0.1', 'decentralrize.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'activism.apps.ActivismConfig',
-    'business.apps.BusinessConfig',
-    'knowledge.apps.KnowledgeConfig',
-    'wellness.apps.WellnessConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'activism',
+    'business',
+    'knowledge',
+    'wellness',
 ]
 
 MIDDLEWARE = [
