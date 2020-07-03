@@ -1,7 +1,7 @@
-from django.urls import path
-
+from django.urls import path 
+from wellness.views import WellnessListView
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', WellnessListView.as_view(), name='wellness-list-page'),
 ]
