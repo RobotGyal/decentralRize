@@ -24,6 +24,6 @@ urlpatterns = [
     path('business/', include('business.urls')),
     path('wellness/', include('wellness.urls')),
     path('activism/', include('activism.urls')),
-    path('knowledge/', include('knowledge.urls')),
+    path('culture/', include('culture.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

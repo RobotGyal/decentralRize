@@ -26,7 +26,7 @@ SECRET_KEY = 'rz^p$dfu%30^l59i7^8f&ax@_mhvn91medvp3n9_=v$dzll$gu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost',  '127.0.0.1', 'decentralrize.herokuapp.com']
+ALLOWED_HOSTS = ['localhost',  '127.0.0.1', 'decentralrize.herokuapp.com', 'www.decentralrize.me']
 
 
 # Application definition
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'activism',
     'business',
-    'knowledge',
+    'culture',
     'wellness',
 ]
 
@@ -138,9 +138,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Change to this setting for local deploy
-STATIC_ROOT = '/static/'
+# STATIC_ROOT = '/static/'
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# Change to this setting for heroku deploy
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS= [
     os.path.join(BASE_DIR, 'staticfiles')
