@@ -79,9 +79,22 @@ WSGI_APPLICATION = 'decentralRize.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME':'decentralrize',
+
+        'USER': 'postgres',
+
+        'PASSWORD': 'postgres',
+
+        'HOST': 'localhost',
+
+        'PORT': '',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 }
 
 # Password validation
@@ -123,9 +136,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Change to this setting for local deploy
-# STATIC_ROOT = '/static/'
+STATIC_ROOT = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS= [
     os.path.join(BASE_DIR, 'staticfiles')
