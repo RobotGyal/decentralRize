@@ -138,9 +138,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Change to this setting for local deploy
-STATIC_ROOT = '/static/'
+# STATIC_ROOT = '/static/'
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# Change to this setting for heroku deploy
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS= [
     os.path.join(BASE_DIR, 'staticfiles')
