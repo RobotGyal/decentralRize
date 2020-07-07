@@ -26,7 +26,7 @@ SECRET_KEY = 'rz^p$dfu%30^l59i7^8f&ax@_mhvn91medvp3n9_=v$dzll$gu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost',  '127.0.0.1', 'decentralrize.herokuapp.com']
+ALLOWED_HOSTS = ['localhost',  '127.0.0.1', 'decentralrize.herokuapp.com', 'www.decentralrize.me']
 
 
 # Application definition
