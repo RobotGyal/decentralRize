@@ -1,7 +1,8 @@
 from django.urls import path
+from business.views import BusinessListView
 
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='business-index'),
+    path('', BusinessListView.as_view(), name='business-index'),
 ]

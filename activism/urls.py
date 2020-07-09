@@ -1,7 +1,8 @@
 from django.urls import path
+from activism.views import ActivismListView
 
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='activism-index'),
+    path('', ActivismListView.as_view(), name='activism-index'),
 ]
