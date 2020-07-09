@@ -3,5 +3,5 @@ from wellness.views import WellnessListView
 from . import views
 
 urlpatterns = [
-    path('', WellnessListView.as_view(), name='wellness-list-page'),
+    path('', WellnessListView.as_view(), name='wellness-index'),
 ]
