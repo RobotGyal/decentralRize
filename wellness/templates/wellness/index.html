@@ -14,14 +14,11 @@
     {% endblock %}
 
     {% block content %}
-
-    {%for well in wellness %}
-      {% load static %}
-        <img style="height: 448px; width: 462.9px;" src="{% static 'wellness/wellness_1.jpg' %}" alt="My image">
-      <p>Name: {{well.name}}</p>
-      <p>Location: {{well.location}}</p>
-      <p>Genre: {{well.genre}}</p>
-
-    {%endfor%}
-
-  {% endblock %}
+      {%for well in wellness %}
+        {% load static %}
+          <img style="height: 448px; width: 462.9px;" src="{% static 'wellness/wellness_1.jpg' %}" alt="My image">
+        <p>Name: {{well.name}}</p>
+        <p>Location: {{well.location}}</p>
+        <p>Genre: {{well.genre}}</p>
+      {%endfor%}
+    {% endblock %}
