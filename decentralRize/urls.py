@@ -26,4 +26,5 @@ urlpatterns = [
     path('activism/', include('activism.urls')),
     path('culture/', include('culture.urls')),
     path('admin/', admin.site.urls),
+    path('pagetest/', views.pagetest)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
