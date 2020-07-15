@@ -6,4 +6,4 @@ class BusinessAdmin(admin.ModelAdmin):
     fields = ( 'image_tag','name','description','image','genre', 'address',)
     readonly_fields = ('image_tag',)
 
-admin.site.register(Business)
+admin.site.register(Business, BusinessAdmin)
