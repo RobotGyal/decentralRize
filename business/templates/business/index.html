@@ -6,7 +6,7 @@
     {% block content %}
         {%for shop in business %}
             {% load static %}
-            <p>{{shop.image}}</p>
+            <img src="{{ business.image.url }}" width='150px' height='150px'/>
             <p>Name: {{shop.name}}</p>
             <p>Genre: {{shop.genre}}</p>
             <p>Description: {{shop.description}}</p>
