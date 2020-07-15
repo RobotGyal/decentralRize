@@ -6,7 +6,7 @@
     {% block content %}
       {%for well in wellness %}
         {% load static %}
-        <p>{{well.image}}</p>
+        <img src="{{well.image}}" />
         <p>Name: {{well.name}}</p>
         <p>Location: {{well.location}}</p>
         <p>Genre: {{well.genre}}</p>
