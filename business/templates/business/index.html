@@ -6,7 +6,9 @@
     {% block content %}
         {%for shop in business %}
             {% load static %}
-            <img src="{{ shop.image.url }}" width='150px' height='150px'/>
+            {% if shop.image %}
+                <img src="{{ shop.image.url }}" width='150px' height='150px'/>
+            {% endif %}
             <p>Name: {{shop.name}}</p>
             <p>Genre: {{shop.genre}}</p>
             <p>Description: {{shop.description}}</p>
