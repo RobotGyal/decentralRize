@@ -15,6 +15,6 @@ class Business(models.Model):
         return self.name
 
     def image_tag(self):
-            return mark_safe(f'<img src="/business_img/{self.image}" width="150" height="150" />')
+            return mark_safe('<img src="%s" width="150" height="150" />' % self.image.url)
 
     image_tag.short_description = 'Image'
