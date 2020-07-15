@@ -5,6 +5,8 @@ class Business(models.Model):
     genre = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
+    image = models.FileField(upload_to='business_img', blank=True)
+
 
 
     def __str__(self):
