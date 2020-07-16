@@ -83,7 +83,8 @@
 </html> {% endcomment %}
 
 {% load static %}
-<!DOCTYPE HTML>
+{% {% extends 'base.html' %} %}
+{% comment %} <!DOCTYPE HTML>
 
 
 <html>
@@ -127,9 +128,10 @@
 							</ul>
 						</nav>
 					</header>
-<br><br><br>
+<br><br><br> {% endcomment %}
 
 <!-- About -->
+                        {% block content %}
 							<article id="about">
 								<h2 class="major">Businesses</h2>
 								<span class="image main"><img src={% static "images/pic03.jpg" alt="" %}/></span>
@@ -140,7 +142,9 @@
                                     <p>Address: {{shop.address}}</p>
                                 {%endfor%}
 							</article>
-</div>
+                        {% endblock %}
+
+{% comment %} </div>
 		<!-- BG -->
 			<div id="bg"></div>
 
@@ -152,4 +156,4 @@
 			<script src={% static "assets/js/main.js"%}></script>
 
 	</body>
-</html>
+</html> {% endcomment %}
