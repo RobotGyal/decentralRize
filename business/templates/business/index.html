@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-{% extends 'base.html' %}
-    {% block title %}
-        Business
-    {% endblock %}
-
-    {% block content %}
-        {%for shop in business %}
-            {% load static %}
-            {% if shop.image %}
-                <img src="{{ shop.image.url }}" width='150px' height='150px'/>
-            {% endif %}
-            <p>Name: {{shop.name}}</p>
-            <p>Genre: {{shop.genre}}</p>
-            <p>Description: {{shop.description}}</p>
-            <p>Address: <a href='{{shop.address}}'>{{shop.address}}</a></p>
-
-=======
 {% load static %}
 <!DOCTYPE HTML>
 
@@ -81,7 +63,6 @@
             <p>Description: {{shop.description}}</p>
             <p>Address: {{shop.address}}</p>
         </article>
->>>>>>> aleia
         {%endfor%}
         {% endblock %}
     </div>
