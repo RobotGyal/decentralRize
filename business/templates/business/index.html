@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+
+<html>
+
+<head>
+    <title>decentralRize</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href={% static "assets/css/main.css"  %} />
+    <noscript>
+        <link rel="stylesheet" href={% static "assets/css/noscript.css" %} /></noscript>
+</head>
+
+<body class="is-preload">
+
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+
+            <div class="logo">
+                <span class="icon fa-gem"></span>
+            </div>
+
+            <div class="content">
+                <div class="inner">
+                    <h1>decentralRize</h1>
+                    <p>Invest in black owned businesses</p>
+                </div>
+            </div>
+
+
+
+            <nav>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="{% url 'wellness-index' %}">Wellness</a></li>
+                    <li><a href="{% url 'business-index' %}">Businesses</a></li>
+                    <li><a href="{% url 'culture-index' %}">Culture</a></li>
+                    <li><a href="{% url 'activism-index' %}">Activism</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!--<li><a href="#elements">Elements</a></li>-->
+                </ul>
+            </nav>
+        </header>
+        <br><br><br>
+
+        <!-- About -->
+
+        {% block title %}
+        <h1 class='major'>Businesses</h1><br><br>
+        {% endblock %}
+
+        <article id="about">
+            {% block content %}
+            {%for shop in business %}
+            <h2 class="major">{{shop.name}}</h2>
+            <p>Description: {{shop.description}}</p>
+            <p>Address: {{shop.address}}</p>
+        </article>
+        {%endfor%}
+        {% endblock %}
+    </div>
+
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src={% static "assets/js/jquery.min.js" %}></script>
+    <script src={% static "assets/js/browser.min.js"%}></script>
+    <script src={% static "assets/js/breakpoints.min.js"%}></script>
+    <script src={% static "assets/js/util.js"%}></script>
+    <script src={% static "assets/js/main.js"%}></script>
+
+</body>
+
+</html>
