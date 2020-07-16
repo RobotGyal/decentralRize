@@ -40,7 +40,15 @@
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
-					</header>
+                    </header>
+                    
+
+
+
+					<article id="about">
+								{% block content %}
+								{% endblock %}
+					</article>
 
 				<!-- Main -->
 					<div id="main">
@@ -95,7 +103,9 @@
 									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
-							</article>
+                            </article>
+                            
+                            
 
 						<!-- Elements -->
 							<article id="elements">
@@ -339,12 +349,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									</form>
 								</section>
 
-							</article>
-
-
-							<article id="about">
-								{% block content %}
-								{% endblock %}
 							</article>
 
 					</div>
