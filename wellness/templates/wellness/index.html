@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% comment %} {% extends 'base.html' %}
     {% block title %}
         Wellness
     {% endblock %}
@@ -15,7 +15,7 @@
         <p>Source: {{well.source}}</p>
         <p>Description: {{well.description}}</p>
       {%endfor%}
-    {% endblock %}
+    {% endblock %} {% endcomment %}
 
 {% load static %}
 <!DOCTYPE HTML>
