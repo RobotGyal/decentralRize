@@ -31,11 +31,10 @@
 						</div>
 						<nav>
 							<ul>
+							    <li><a href="/">Home</a></li>
 								<li><a href="#intro">Intro</a></li>
                                 <li><a href="{% url 'wellness-index' %}">Wellness</a></li>
 								<li><a href="{% url 'business-index' %}">Businesses</a></li>
-								<li><a href="{% url 'culture-index' %}">Culture</a></li>
-								<li><a href="{% url 'activism-index' %}">Activism</a></li>
 								<li><a href="#about">About</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
@@ -49,10 +48,8 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Intro</h2>
-								<span class="image main"><img src={% static "images/pic01.jpg" alt="" %} /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-							</article>
+								<span class="image main"><img src={% static "images/blm.jpg" alt="" %} /></span>
+<p>decentralRize presents resources for consumers to invest into black owned businesses and provides a spotlight on societal wellness, as well as systematic injustices. This will help consumers move away from traditional economic constructs and towards a community based economic structure.</p>							</article>
 
 						<!-- Work -->
 							<article id="work">
@@ -98,6 +95,11 @@
 									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
+							</article>
+
+							<article id="about">
+								{% block content %}
+								{% endblock %}
 							</article>
 
 						<!-- Elements -->
@@ -356,10 +358,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 		<!-- Scripts -->
 			<script src={% static "assets/js/jquery.min.js" %}></script>
-			<script src={% static "assets/js/browser.min.js"%}></script>
-			<script src={% static "assets/js/breakpoints.min.js"%}></script>
-			<script src={% static "assets/js/util.js"%}></script>
-			<script src={% static "assets/js/main.js"%}></script>
+			<script src={% static "assets/js/browser.min.js" %}></script>
+			<script src={% static "assets/js/breakpoints.min.js" %}></script>
+			<script src={% static "assets/js/util.js" %}></script>
+			<script src={% static "assets/js/main.js" %}></script>
 
 	</body>
 </html>

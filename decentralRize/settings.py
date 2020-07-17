@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 import os
-import psycopg2
+# import psycopg2
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -67,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -137,20 +138,26 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Change to this setting for local deploy
-STATIC_ROOT = '/static/'
+# STATIC_ROOT = '/static/'
 
 # Change to this setting for heroku deploy
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+# Change to this setting for local deploy
+# STATICFILES_DIRS= [
+#     os.path.join(BASE_DIR, 'static')
+# ]
+
+#Change to this setting for heroku deploy
 STATICFILES_DIRS= [
-    os.path.join(BASE_DIR, 'staticfiles')
+    os.path.join(BASE_DIR, 'static')
 ]
 
-# MEDIA_URL = '/static/pics/'
+MEDIA_URL = '/media/'
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Required for Heroku
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
