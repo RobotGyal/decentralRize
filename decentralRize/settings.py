@@ -167,3 +167,5 @@ DATABASES['default'].update(db_from_env)
 #     DATABASES = {'default': dj_database_url.config()}
 
 # django_heroku.settings(locals())
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
