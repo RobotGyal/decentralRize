@@ -135,13 +135,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
 # Change to this setting for local deploy
 # STATIC_ROOT = '/static/'
 
 # Change to this setting for heroku deploy
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Change to this setting for local deploy
 # STATICFILES_DIRS= [
@@ -149,9 +149,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # ]
 
 #Change to this setting for heroku deploy
-STATICFILES_DIRS= [
-    os.path.join(BASE_DIR, 'static')
-]
+# STATICFILES_DIRS= [
+#     os.path.join(BASE_DIR, 'static')
+# ]
 
 MEDIA_URL = '/media/'
 
@@ -175,4 +175,11 @@ DATABASES['default'].update(db_from_env)
 
 # django_heroku.settings(locals())
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+STATIC_URL = '/static/'
+STATIC_ROOT = '/static/'
+STATICFILES_DIRS= [
+    os.path.join(BASE_DIR, 'static')
+]
