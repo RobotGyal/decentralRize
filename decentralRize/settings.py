@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'business',
     'culture',
     'wellness',
+    'registration',
 ]
 
 MIDDLEWARE = [
