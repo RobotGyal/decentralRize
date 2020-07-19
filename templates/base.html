@@ -39,12 +39,18 @@
                                 <li><a href="{% url 'wellness-index' %}">Wellness</a></li>
 								<li><a href="{% url 'business-index' %}">Businesses</a></li>
 								<li><a href="#about">About</a></li>
-								<li><a href="{%url 'login'%}">Login</a></li>			
-								<li><a href="/registration/signup">Sign Up</a></li>
+							
 
 								{% if request.user.is_authenticated %}
+
 								<li><a href="">Logout</a></li>
 								<li>{{ request.user.username }}!</li>
+
+								{%elif not request.user.is_authenticated %}
+
+								<li><a href="{%url 'login'%}">Login</a></li>			
+								<li><a href="/registration/signup">Sign Up</a></li>
+								
 								{% endif %}
 								<li><a href="#contact">Contact</a></li>
 								
