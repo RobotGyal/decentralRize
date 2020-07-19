@@ -14,10 +14,10 @@ class SignUpView(CreateView):
 
 
 
-class Login_View(CreateView):
-    form_class = UserCreationForm
-    success_url = reverse_lazy('login')
-    template_name = 'registration/login.html'
+# class Login_View(CreateView):
+#     form_class = UserCreationForm
+#     success_url = reverse_lazy('base')
+#     template_name = 'registration/login.html'
 
 
 

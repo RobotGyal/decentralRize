@@ -187,5 +187,5 @@ STATICFILES_DIRS= [
 
 
 
-LOGIN_REDIRECT_URL = '/decentralRize/'
-LOGOUT_REDIRECT_URL = '/decentralRize/'
+LOGIN_REDIRECT_URL = '/base/'
+LOGOUT_REDIRECT_URL = '/base/'

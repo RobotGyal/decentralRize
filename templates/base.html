@@ -18,11 +18,7 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-					{% if request.user.is_authenticated %}
-					<p>
-						Hello, {{ request.user.username }}!
-					</p>
-				{% endif %}
+					
 				
 
 				<!-- Header -->
@@ -43,8 +39,13 @@
                                 <li><a href="{% url 'wellness-index' %}">Wellness</a></li>
 								<li><a href="{% url 'business-index' %}">Businesses</a></li>
 								<li><a href="#about">About</a></li>
-								<li><a href="{%url 'login'%}">Login</a></li>
+								<li><a href="{%url 'login'%}">Login</a></li>			
 								<li><a href="/registration/signup">Sign Up</a></li>
+
+								{% if request.user.is_authenticated %}
+								<li><a href="">Logout</a></li>
+								<li>{{ request.user.username }}!</li>
+								{% endif %}
 								<li><a href="#contact">Contact</a></li>
 								
 								<!--<li><a href="#elements">Elements</a></li>-->
