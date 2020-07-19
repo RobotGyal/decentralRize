@@ -26,6 +26,7 @@ urlpatterns = [
     path('activism/', include('activism.urls')),
     path('culture/', include('culture.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('registration/', include('registration.urls')),
     path('admin/', admin.site.urls),
 ]
 
