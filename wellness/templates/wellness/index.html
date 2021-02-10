@@ -1,35 +1,20 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+    {% block title %}
+        Wellness
+    {% endblock %}
 
-
-<!--
-<head>
- <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 40%;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-  padding: 2px 16px;
-}
-</style>
-</head>
- -->
-<body>
-
-
-{%for well in wellness %}
-
-{{well.name}}
-{{well.location}}
-{{well.genre}}
-{%endfor%}
-
-</body>
-</html> 
+    {% block content %}
+      <article id="about">
+        <h2 class="major">Wellness Resources</h2>
+        <span class="image main"><img src={% static "images/pic03.jpg" alt="" %}/></span>
+        <p>DecentralRize puts the spotlight on Black Owned Business. We strive to support, up lift, and grow our communities by getting you in touch with community based economic structures. Combating systematic injustices and promoting societal wellness, we decentralize economic constructs and together we RIZE!</p>
+        {%for well in wellness %}
+          <h2 class="major">{{well.name}}</h2>
+          <p>Location: {{well.location}}</p>
+          <p>Genre: {{well.genre}}</p>
+          <p>Source: {{well.source}}</p>
+          <p>Description: {{well.description}}</p>
+        {%endfor%}
+      </article>
+    {% endblock %}

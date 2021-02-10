@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block title %}
+        Wellness
+    {% endblock %}
+   {% block content %}
+        <article id="about">
+            <h2 class="major">Businesses</h2>
+            <span class="image main"><img src={% static "images/pic03.jpg" alt="" %}/></span>
+            <p>DecentralRize puts the spotlight on Black Owned Business. We strive to support, up lift, and grow our communities by getting you in touch with community based economic structures. Combating systematic injustices and promoting societal wellness, we decentralize economic constructs and together we RIZE!</p>
+            {%for shop in business %}
+                <h2 class="major">{{shop.name}}</h2>
+                <p>Description: {{shop.description}}</p>
+                <p>Address: {{shop.address}}</p>
+            {%endfor%}
+        </article>
+    {% endblock %}
